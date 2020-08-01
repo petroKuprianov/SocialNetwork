@@ -1,0 +1,103 @@
+.dialogs{
+    display: grid;
+    grid-template-areas: "dialog message";
+    grid-template-columns: 1.5fr 3fr;
+    /* background-color: rgb(112, 112, 112); */
+    /* height: 100vh; */
+    height: 100%;
+    
+}
+.dialog{
+    grid-area: dialog;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid black;
+    border-top: 2px  solid black;
+    
+}
+.messages{
+    grid-area: message;
+    display: flex;
+    flex-direction: column;
+    /* background-color: gray; */
+    /* margin-top: 20px; */
+    /* text-align: center; */
+}
+.test{
+    display: flex;
+    flex-direction: column;
+}
+.textDecor{
+    margin-top: 10px;
+    width: 300px;
+    height: 60px;
+    background-color: initial;
+    color: white;
+    border: 1px outset white;
+}
+.textareaBlock{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageArea{
+    width: 60%;
+    height: 70vh;
+    background-color: gray;
+    margin-left: 30px;
+    /* display: flex;
+    flex-direction: row; */
+}
+.dialog_Text{
+    color: honeydew;
+    font-size: 26px;
+    font-weight: 600px;
+}
+textarea{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid white;
+    /* border: none; */
+}
+button{
+    background-color: rgb(55, 123, 248);
+    border: none;
+    padding: 10px 20px;
+    color:white;
+    border-radius: 10px;
+}
+button:hover{
+    box-shadow: 0px 0px 10px 1px rgb(55, 123, 248);
+}
+
+.test{
+    background-color: rgb(185, 175, 175);
+    width: 100%;
+    min-height: 50%;
+    overflow-y: auto;
+    max-height: 200px;
+    opacity: 1;
+   
+}
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+
+/* .textareaBlock {
+    
+    margin-left: 190px;
+    margin-top: 10px;
+    align-self: flex-end;
+    
+    
+}
+
+.buttonBlock{
+margin-left: 10px;
+margin-top: 10px;
+align-self: flex-end;
+} */

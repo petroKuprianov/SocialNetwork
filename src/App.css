@@ -1,0 +1,23 @@
+.app-wrapper{
+  display: grid;
+  width: 100%;
+  /* margin: 0 auto; */
+
+  grid-template-areas: 
+  "header header"
+  "nav c";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr  10fr;
+  /* grid-gap:10px; */
+}
+.app-wrapper-content{
+  grid-area: c;
+  background: rgb(142, 162, 168);
+  /* height: 89vh; */
+  min-height: 89vh;
+  /* opacity: 0.7; */
+  /* margin-top: 30px; */
+  }
+
+
+

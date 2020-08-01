@@ -1,0 +1,11 @@
+.content_img_first{
+     margin-left: 30px;
+     
+     height: 300px; 
+    
+    margin-left: 60px;
+    /* object-fit: cover; */
+}
+.discription{
+    padding:20px;
+}
