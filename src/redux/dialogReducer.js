@@ -18,8 +18,8 @@ let initialState = {
         { id: 3, name: "Katya", lin: "https://www.sostav.ru/app/public/images/news/2015/12/18/Screenshot_2.jpg?rand=0.2807936074677855" },
         { id: 4, name: "Misha", lin: "https://www.sostav.ru/app/public/images/news/2015/12/18/Screenshot_2.jpg?rand=0.2807936074677855" },
         { id: 5, name: "Lena", lin: "https://cdnimg.rg.ru/i/gallery/9c63b6ab/29_06a485ed.jpg" },
-        { id: 5, name: "Dasha", lin: "https://cdnimg.rg.ru/i/gallery/9c63b6ab/29_06a485ed.jpg" },
-        { id: 5, name: "Vasya", lin: "https://cdnimg.rg.ru/i/gallery/9c63b6ab/29_06a485ed.jpg" }
+        { id: 6, name: "Dasha", lin: "https://cdnimg.rg.ru/i/gallery/9c63b6ab/29_06a485ed.jpg" },
+        { id: 7, name: "Maria", lin: "https://cdnimg.rg.ru/i/gallery/9c63b6ab/29_06a485ed.jpg" }
     ]
 };
 

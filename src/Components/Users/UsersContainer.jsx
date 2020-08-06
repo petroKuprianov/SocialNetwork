@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { followAC, unFollowAC, setUsers, setCurnetPageAC, setTotalUserCountAC, setIsFetchingAC } from '../../redux/usersReducer';
+import { follow, unFollow, setUsers, setCurnetPage, setUsersCount, setIsFetching } from '../../redux/usersReducer';
 import Users from './Users';
 import * as axios from 'axios';
-import classes from './UsersContainer.module.css'
+import Preloader from '../Common/PreLoader';
 
 
 class UsersApiContainer extends React.Component {
@@ -28,7 +28,7 @@ class UsersApiContainer extends React.Component {
     render = () => {
         
         return  <>
-        {this.props.isFetching ? <div className={classes.lds_circle}></div>:<Users totalUserCount ={this.props.totalUserCount} 
+        {this.props.isFetching ? <Preloader />:<Users totalUserCount ={this.props.totalUserCount} 
             pageSize={this.props.pageSize} currentPage={this.props.currentPage}
             pageChanged = {this.pageChanged} users ={this.props.users}
             follow = {this.props.follow} unFollow={this.props.unFollow}/>}
@@ -49,7 +49,7 @@ let mapStateToProps = (state) => {
     }
 }
 
-let mapDispatchToProps = (dispatch) => {
+/*let mapDispatchToProps = (dispatch) => {
     return {
         follow: (userId) =>{ dispatch(followAC(userId)) },
 
@@ -66,7 +66,8 @@ let mapDispatchToProps = (dispatch) => {
     }
 }
 
+*/
 
-
-export default connect(mapStateToProps,mapDispatchToProps)(UsersApiContainer);
+export default connect(mapStateToProps,
+    {follow, unFollow, setUsers, setCurnetPage, setUsersCount, setIsFetching})(UsersApiContainer);
 

@@ -1,5 +1,6 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_POST_TEXT = 'UPDATE-POST-TEXT';
+const SET_USER_PROFILE = 'SET-USER-PROFILE';
 
 let initilaState= {
     
@@ -8,7 +9,9 @@ let initilaState= {
             { id: 2, message: "How are you?", countLikes: 155, lin: "https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg" },
             { id: 3, message: "Do you love beer?", countLikes: 45, lin: "https://image.freepik.com/free-photo/image-human-brain_99433-298.jpg" }
         ],
-        newPostText: ""
+        newPostText: "",
+        profile: null
+
 };
 
 
@@ -40,6 +43,10 @@ const profileReducer = (state = initilaState, action) => {
             
             
         }
+
+        case SET_USER_PROFILE:{
+                return {...state, profile: action.profile}
+        }
         default:
             return state;
     }
@@ -49,7 +56,9 @@ const profileReducer = (state = initilaState, action) => {
 
 export const addPostActitionCreator = () => ({ type: ADD_POST });
 
-export const updateNewPostTextActionCreator = (text) =>
-    ({ type: UPDATE_POST_TEXT, postText: text });
+export const updateNewPostTextActionCreator = (text) => ({ type: UPDATE_POST_TEXT, postText: text });
+
+
+export const setUserProfile = (profile) =>({type:SET_USER_PROFILE, profile});
 
 export default profileReducer;
